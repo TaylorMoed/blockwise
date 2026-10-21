@@ -6,7 +6,63 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello Blockwise</h1>
+    <main class="calendar">
+      <header class="week-header">
+        <div></div>
+        <div>Sun</div>
+        <div>Mon</div>
+        <div>Tue</div>
+        <div class="today">Wed</div>
+        <div>Thu</div>
+        <div>Fri</div>
+        <div>Sat</div>
+      </header>
+      <div class="calendar-body">
+        <div class="time-column">
+          <div class="time-label">6 AM</div>
+          <div class="time-label">7 AM</div>
+          <div class="time-label">8 AM</div>
+          <div class="time-label">9 AM</div>
+          <div class="time-label">10 AM</div>
+          <div class="time-label">11 AM</div>
+          <div class="time-label">12 PM</div>
+          <div class="time-label">1 PM</div>
+          <div class="time-label">2 PM</div>
+          <div class="time-label">3 PM</div>
+          <div class="time-label">4 PM</div>
+          <div class="time-label">5 PM</div>
+          <div class="time-label">6 PM</div>
+          <div class="time-label">7 PM</div>
+          <div class="time-label">8 PM</div>
+          <div class="time-label">9 PM</div>
+          <div class="time-label">10 PM</div>
+          <div class="time-label">11 PM</div>
+        </div>
+        <div id="grid"></div>
+      </div>
+    </main>
+    <button id="add-btn">Add block</button>
+    <button id="clear-week">Clear week</button>
+
+    <dialog id="block-dialog">
+      <form id="block-form">
+        <input name="title" placeholder="Title" required />
+        <select name="day">
+          <option value="0">Sun</option>
+          <option value="1">Mon</option>
+          <option value="2">Tues</option>
+          <option value="3">Wed</option>
+          <option value="4">Thurs</option>
+          <option value="5">Fri</option>
+          <option value="6">Sat</option>
+        </select>
+        <input name="start" type="time" required />
+        <input name="end" type="time" required />
+        <input name="color" type="color" value="#4f8cff" />
+        <button type="button" id="delete-btn">Delete</button>
+        <button type="submit">Save</button>
+      </form>
+    </dialog>
     <script src="app.js"></script>
   </body>
 </html>

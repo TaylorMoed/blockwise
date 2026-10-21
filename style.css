@@ -1,0 +1,38 @@
+.week-header {
+  display: grid;
+  grid-template-columns: 60px repeat(7, 1fr);
+}
+
+:root {
+  --today-bg: #fff3cd;
+}
+
+.today {
+  background: var(--today-bg);
+}
+
+.time-label {
+  height: 60px;
+}
+
+.calendar {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.week-header {
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+.calendar-body {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: repeat(36, 30px);
+}
